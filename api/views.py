@@ -2,12 +2,14 @@ from rest_framework import viewsets, generics, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.views import APIView
 from django.db.models import Q, Count, Avg
 from django.utils import timezone
 from django.http import JsonResponse, HttpResponse
 from django.core.mail import send_mail
 from django.conf import settings
 from django.db.models import Sum
+from django.shortcuts import render
 import json
 
 from blog.models import BlogPage, BlogCategory, BlogAuthor
@@ -488,6 +490,108 @@ class VersionInfoView(generics.GenericAPIView):
             ],
             'supported_formats': ['json', 'csv']
         })
+
+
+class ApiDocsView(APIView):
+    """
+    Simple API documentation view
+    """
+    def get(self, request):
+        docs_html = """
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Portfolio Platform API Documentation</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 40px; }
+                h1 { color: #007acc; }
+                h2 { color: #333; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+                .endpoint { background: #f8f9fa; padding: 10px; margin: 10px 0; border-radius: 5px; }
+                .method { font-weight: bold; }
+                .get { color: #28a745; }
+                .post { color: #dc3545; }
+                code { background: #e9ecef; padding: 2px 4px; border-radius: 3px; }
+            </style>
+        </head>
+        <body>
+            <h1>Portfolio Platform API Documentation</h1>
+            
+            <h2>Authentication</h2>
+            <p>Most endpoints require authentication. Use session authentication or DRF token authentication.</p>
+            
+            <h2>Blog Endpoints</h2>
+            <div class="endpoint">
+                <span class="method get">GET</span> <code>/api/blog/</code><br>
+                <strong>Description:</strong> List all blog posts<br>
+                <strong>Parameters:</strong> category, tag, search, page
+            </div>
+            
+            <div class="endpoint">
+                <span class="method get">GET</span> <code>/api/blog/{id}/</code><br>
+                <strong>Description:</strong> Get specific blog post details
+            </div>
+            
+            <div class="endpoint">
+                <span class="method get">GET</span> <code>/api/blog/popular/</code><br>
+                <strong>Description:</strong> Get popular blog posts
+            </div>
+            
+            <div class="endpoint">
+                <span class="method get">GET</span> <code>/api/blog/recent/</code><br>
+                <strong>Description:</strong> Get recent blog posts
+            </div>
+            
+            <h2>Search Endpoints</h2>
+            <div class="endpoint">
+                <span class="method get">GET</span> <code>/api/search/?q={query}</code><br>
+                <strong>Description:</strong> Global search across all content
+            </div>
+            
+            <div class="endpoint">
+                <span class="method get">GET</span> <code>/api/search/blog/?q={query}</code><br>
+                <strong>Description:</strong> Search blog posts specifically
+            </div>
+            
+            <h2>Analytics Endpoints</h2>
+            <div class="endpoint">
+                <span class="method get">GET</span> <code>/api/blog/stats/</code><br>
+                <strong>Description:</strong> Get blog statistics
+            </div>
+            
+            <div class="endpoint">
+                <span class="method get">GET</span> <code>/api/analytics/blog/</code><br>
+                <strong>Description:</strong> Detailed blog analytics
+            </div>
+            
+            <h2>Utility Endpoints</h2>
+            <div class="endpoint">
+                <span class="method get">GET</span> <code>/api/health/</code><br>
+                <strong>Description:</strong> API health check
+            </div>
+            
+            <div class="endpoint">
+                <span class="method get">GET</span> <code>/api/version/</code><br>
+                <strong>Description:</strong> API version information
+            </div>
+            
+            <div class="endpoint">
+                <span class="method post">POST</span> <code>/api/contact/</code><br>
+                <strong>Description:</strong> Send contact form message<br>
+                <strong>Body:</strong> {"name": "...", "email": "...", "subject": "...", "message": "..."}
+            </div>
+            
+            <h2>AI Integration</h2>
+            <p>AI endpoints are available at <code>/ai/</code> prefix. See AI documentation for details.</p>
+            
+            <h2>Response Format</h2>
+            <p>All responses are in JSON format. List endpoints include pagination metadata.</p>
+            
+            <h2>Error Handling</h2>
+            <p>Errors return appropriate HTTP status codes with error messages in JSON format.</p>
+        </body>
+        </html>
+        """
+        return HttpResponse(docs_html, content_type='text/html')
 
 
 # Placeholder viewsets for portfolio-related endpoints

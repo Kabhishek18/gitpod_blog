@@ -1,6 +1,5 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from rest_framework.documentation import include_docs_urls
 from . import views
 
 # Create a router and register our viewsets with it
@@ -55,12 +54,12 @@ urlpatterns = [
     path('webhooks/', views.WebhookListView.as_view(), name='webhook-list'),
     path('webhooks/<int:pk>/', views.WebhookDetailView.as_view(), name='webhook-detail'),
     
-    # API documentation
-    path('docs/', include_docs_urls(title='Portfolio API Documentation')),
-    
     # Health check
     path('health/', views.HealthCheckView.as_view(), name='health-check'),
     
     # Version info
     path('version/', views.VersionInfoView.as_view(), name='version-info'),
+    
+    # Simple docs endpoint instead of fancy documentation
+    path('docs/', views.ApiDocsView.as_view(), name='api-docs'),
 ]

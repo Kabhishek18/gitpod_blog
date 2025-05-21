@@ -1,47 +1,43 @@
 {% extends "base.html" %}
-{% load static %}
-
-{% block title %}Portfolio Platform{% endblock %}
 
 {% block content %}
-<div class="container my-5">
-    <div class="text-center">
-        <h1 class="display-4">Portfolio Platform</h1>
-        <p class="lead">AI-Powered Blog Platform</p>
-        <div class="mt-4">
-            <a href="/blog/" class="btn btn-primary me-3">Visit Blog</a>
-            <a href="/admin/" class="btn btn-outline-primary">Admin Panel</a>
-        </div>
-    </div>
+<div class="text-center">
+    <h1 class="display-4">🚀 Portfolio Platform</h1>
+    <p class="lead">Django + Wagtail + AI Integration</p>
     
     <div class="row mt-5">
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body text-center">
-                    <i class="fas fa-robot fa-3x text-primary mb-3"></i>
-                    <h5>AI Integration</h5>
-                    <p>Generate and improve content with AI</p>
+                    <h5>⚙️ Admin Panel</h5>
+                    <p>Manage your content</p>
+                    <a href="/admin/" class="btn btn-primary">Open Admin</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body text-center">
-                    <i class="fas fa-blog fa-3x text-primary mb-3"></i>
-                    <h5>Blog System</h5>
-                    <p>Full-featured blog with Wagtail CMS</p>
+                    <h5>🔌 REST API</h5>
+                    <p>Explore the API</p>
+                    <a href="/api/" class="btn btn-outline-primary">Browse API</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body text-center">
-                    <i class="fas fa-api fa-3x text-primary mb-3"></i>
-                    <h5>REST API</h5>
-                    <p>Complete API for all features</p>
+                    <h5>🤖 AI Features</h5>
+                    <p>AI-powered tools</p>
+                    <a href="/ai/" class="btn btn-outline-secondary">Explore AI</a>
                 </div>
             </div>
         </div>
+    </div>
+    
+    <div class="alert alert-info mt-4">
+        <h6>🔑 Default Login</h6>
+        <p class="mb-0"><strong>Username:</strong> admin | <strong>Password:</strong> admin123</p>
     </div>
 </div>
 {% endblock %}

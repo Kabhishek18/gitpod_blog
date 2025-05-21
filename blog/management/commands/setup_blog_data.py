@@ -2,8 +2,6 @@ from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User
 from blog.models import BlogCategory, BlogAuthor
 from wagtail.models import Site, Page
-from wagtail.core.models import Site as LegacySite
-
 
 class Command(BaseCommand):
     help = 'Setup initial blog data including categories and sample content'

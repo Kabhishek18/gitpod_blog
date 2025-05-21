@@ -5,6 +5,7 @@ from wagtail.models import Page
 from wagtail.fields import RichTextField, StreamField
 from wagtail.admin.panels import FieldPanel, MultiFieldPanel, InlinePanel
 from wagtail import blocks
+from wagtail.images.blocks import ImageChooserBlock
 from wagtail.snippets.models import register_snippet
 from wagtail.search import index
 from taggit.models import TaggedItemBase
@@ -42,10 +43,12 @@ class BlogPage(Page):
     """
     Individual blog post page
     """
-    # Basic fields
+    # Basic fields - FIXED: Added proper on_delete as required by Wagtail
     author = models.ForeignKey(
         User,
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,  # Fixed: Changed from CASCADE to SET_NULL
+        null=True,  # Added: Make nullable since we're using SET_NULL
+        blank=True,  # Added: Allow blank in forms
         related_name='blog_posts'
     )
     
@@ -61,22 +64,23 @@ class BlogPage(Page):
     # Content
     excerpt = models.TextField(
         max_length=300,
-        help_text="Brief description of the blog post"
+        help_text="Brief description of the blog post",
+        blank=True  # Added: Make optional
     )
     
     # Blog content using StreamField for flexibility
     body = StreamField([
         ('heading', blocks.CharBlock(form_classname="title")),
         ('paragraph', blocks.RichTextBlock()),
-        ('image', blocks.ImageChooserBlock()),
+        ('image', ImageChooserBlock()),
         ('code', blocks.TextBlock(help_text="Code snippet")),
         ('quote', blocks.BlockQuoteBlock()),
         ('gallery', blocks.StreamBlock([
-            ('image', blocks.ImageChooserBlock()),
+            ('image', ImageChooserBlock()),
         ])),
         ('embed', blocks.RawHTMLBlock()),
         ('table', blocks.TextBlock(help_text="HTML table")),
-    ], use_json_field=True)
+    ], use_json_field=True, blank=True)  # Added: Make optional
     
     # Categories and tags
     categories = ParentalManyToManyField(BlogCategory, blank=True)
@@ -323,206 +327,3 @@ class BlogAuthor(models.Model):
     class Meta:
         verbose_name = "Blog Author"
         verbose_name_plural = "Blog Authors"
-
-
-class AIBlogAssistant(models.Model):
-    """
-    Model to track AI assistance requests and results
-    """
-    blog_post = models.ForeignKey(
-        BlogPage,
-        on_delete=models.CASCADE,
-        related_name='ai_assistance_records'
-    )
-    
-    assistance_type = models.CharField(max_length=50, choices=[
-        ('draft_suggestion', 'Draft Suggestion'),
-        ('expand_paragraph', 'Expand Paragraph'),
-        ('shorten_content', 'Shorten Content'),
-        ('grammar_fix', 'Grammar Fix'),
-        ('tone_adjustment', 'Tone Adjustment'),
-        ('seo_optimization', 'SEO Optimization'),
-        ('tag_suggestion', 'Tag Suggestion'),
-        ('title_generation', 'Title Generation'),
-        ('meta_description', 'Meta Description'),
-    ])
-    
-    input_text = models.TextField(help_text="Original text or prompt")
-    output_text = models.TextField(help_text="AI-generated result")
-    
-    # AI model information
-    model_used = models.CharField(max_length=100, blank=True)
-    processing_time = models.FloatField(null=True, blank=True, help_text="Time in seconds")
-    
-    # Feedback
-    user_rating = models.IntegerField(
-        null=True,
-        blank=True,
-        choices=[(i, i) for i in range(1, 6)],
-        help_text="User rating 1-5"
-    )
-    user_feedback = models.TextField(blank=True)
-    
-    created_at = models.DateTimeField(auto_now_add=True)
-    applied = models.BooleanField(default=False, help_text="Whether the AI suggestion was applied")
-
-    def __str__(self):
-        return f"{self.assistance_type} for {self.blog_post.title}"
-
-    class Meta:
-        ordering = ['-created_at']
-        verbose_name = "AI Blog Assistant Record"
-        verbose_name_plural = "AI Blog Assistant Records"
-
-
-class BlogSeries(models.Model):
-    """
-    Model for blog post series
-    """
-    title = models.CharField(max_length=200)
-    description = models.TextField()
-    slug = models.SlugField(unique=True)
-    
-    cover_image = models.ForeignKey(
-        'wagtailimages.Image',
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL,
-        related_name='series_cover'
-    )
-    
-    created_at = models.DateTimeField(auto_now_add=True)
-    is_completed = models.BooleanField(default=False)
-    
-    def __str__(self):
-        return self.title
-
-    def get_posts(self):
-        """Get all posts in this series, ordered by series order"""
-        return self.posts.filter(is_draft=False).order_by('series_order')
-
-    def get_post_count(self):
-        """Get total number of posts in series"""
-        return self.posts.filter(is_draft=False).count()
-
-    class Meta:
-        verbose_name_plural = "Blog Series"
-        ordering = ['-created_at']
-
-
-class BlogSeriesPost(models.Model):
-    """
-    Through model for blog posts in series
-    """
-    blog_post = models.ForeignKey(
-        BlogPage,
-        on_delete=models.CASCADE,
-        related_name='in_series'
-    )
-    series = models.ForeignKey(
-        BlogSeries,
-        on_delete=models.CASCADE,
-        related_name='posts'
-    )
-    series_order = models.PositiveIntegerField(default=1)
-    
-    class Meta:
-        unique_together = ['blog_post', 'series']
-        ordering = ['series_order']
-
-
-class BlogComment(models.Model):
-    """
-    Comments model for blog posts
-    """
-    blog_post = models.ForeignKey(
-        BlogPage,
-        on_delete=models.CASCADE,
-        related_name='comments'
-    )
-    
-    # Comment details
-    author_name = models.CharField(max_length=100)
-    author_email = models.EmailField()
-    author_website = models.URLField(blank=True)
-    
-    content = models.TextField()
-    
-    # Moderation
-    is_approved = models.BooleanField(default=False)
-    is_spam = models.BooleanField(default=False)
-    
-    # Threading for replies
-    parent = models.ForeignKey(
-        'self',
-        null=True,
-        blank=True,
-        on_delete=models.CASCADE,
-        related_name='replies'
-    )
-    
-    # Metadata
-    ip_address = models.GenericIPAddressField(null=True, blank=True)
-    user_agent = models.TextField(blank=True)
-    
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return f"Comment by {self.author_name} on {self.blog_post.title}"
-
-    def get_replies(self):
-        """Get approved replies to this comment"""
-        return self.replies.filter(is_approved=True, is_spam=False)
-
-    class Meta:
-        ordering = ['-created_at']
-        verbose_name = "Blog Comment"
-        verbose_name_plural = "Blog Comments"
-
-
-class BlogAnalytics(models.Model):
-    """
-    Analytics model for tracking blog performance
-    """
-    blog_post = models.OneToOneField(
-        BlogPage,
-        on_delete=models.CASCADE,
-        related_name='analytics'
-    )
-    
-    # View analytics
-    total_views = models.PositiveIntegerField(default=0)
-    unique_views = models.PositiveIntegerField(default=0)
-    avg_time_on_page = models.FloatField(default=0.0, help_text="Average time in seconds")
-    bounce_rate = models.FloatField(default=0.0, help_text="Bounce rate percentage")
-    
-    # Engagement analytics
-    total_comments = models.PositiveIntegerField(default=0)
-    total_shares = models.PositiveIntegerField(default=0)
-    likes_count = models.PositiveIntegerField(default=0)
-    
-    # SEO analytics
-    search_impressions = models.PositiveIntegerField(default=0)
-    search_clicks = models.PositiveIntegerField(default=0)
-    avg_position = models.FloatField(default=0.0, help_text="Average search position")
-    
-    # Traffic sources
-    direct_traffic = models.PositiveIntegerField(default=0)
-    search_traffic = models.PositiveIntegerField(default=0)
-    social_traffic = models.PositiveIntegerField(default=0)
-    referral_traffic = models.PositiveIntegerField(default=0)
-    
-    last_updated = models.DateTimeField(auto_now=True)
-
-    def calculate_ctr(self):
-        """Calculate click-through rate from search"""
-        if self.search_impressions > 0:
-            return (self.search_clicks / self.search_impressions) * 100
-        return 0
-
-    def __str__(self):
-        return f"Analytics for {self.blog_post.title}"
-
-    class Meta:
-        verbose_name_plural = "Blog Analytics"

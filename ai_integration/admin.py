@@ -88,6 +88,40 @@ class AIModelAdmin(admin.ModelAdmin):
     deactivate_models.short_description = "Deactivate selected models"
 
 
+# Admin action for bulk operations
+def export_ai_requests_csv(modeladmin, request, queryset):
+    """
+    Export AI requests to CSV
+    """
+    import csv
+    from django.http import HttpResponse
+    
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="ai_requests.csv"'
+    
+    writer = csv.writer(response)
+    writer.writerow([
+        'ID', 'User', 'Model', 'Request Type', 'Status',
+        'Processing Time', 'Tokens Used', 'Cost', 'Created At'
+    ])
+    
+    for request_obj in queryset:
+        writer.writerow([
+            request_obj.id,
+            request_obj.user.username,
+            request_obj.ai_model.name,
+            request_obj.request_type,
+            request_obj.status,
+            request_obj.processing_time,
+            request_obj.tokens_used,
+            request_obj.cost,
+            request_obj.created_at
+        ])
+    
+    return response
+export_ai_requests_csv.short_description = "Export selected requests to CSV"
+
+
 @admin.register(AIRequest)
 class AIRequestAdmin(admin.ModelAdmin):
     """
@@ -107,6 +141,9 @@ class AIRequestAdmin(admin.ModelAdmin):
         'tokens_used', 'cost', 'ip_address', 'user_agent'
     ]
     date_hierarchy = 'created_at'
+    
+    # Fixed: Use list instead of tuple for actions
+    actions = [export_ai_requests_csv]
     
     fieldsets = (
         ('Request Info', {
@@ -389,167 +426,10 @@ class AIGeneratedImageAdmin(admin.ModelAdmin):
     prompt_preview.short_description = 'Prompt'
 
 
-# Custom admin site configuration
-class AIIntegrationAdminConfig:
-    """
-    Custom admin configuration for AI Integration
-    """
-    def __init__(self, admin_site):
-        self.admin_site = admin_site
-    
-    def get_app_list(self, request):
-        """
-        Customize app list for AI Integration
-        """
-        app_list = self.admin_site.get_app_list(request)
-        
-        # Find AI Integration app and reorder models
-        for app in app_list:
-            if app['app_label'] == 'ai_integration':
-                # Reorder models by importance
-                model_order = [
-                    'AIModel', 'AIRequest', 'PromptTemplate', 
-                    'UserAIUsage', 'ContentAnalysis', 'AIFeedback',
-                    'AIGeneratedImage'
-                ]
-                
-                models_dict = {model['object_name']: model for model in app['models']}
-                app['models'] = [models_dict[name] for name in model_order if name in models_dict]
-                break
-        
-        return app_list
-
-
-# Admin dashboard customizations
-def ai_integration_dashboard_stats():
-    """
-    Get AI integration statistics for dashboard
-    """
-    from django.db.models import Sum, Avg, Count
-    from datetime import datetime, timedelta
-    
-    # Calculate statistics
-    today = timezone.now().date()
-    week_ago = today - timedelta(days=7)
-    month_ago = today - timedelta(days=30)
-    
-    stats = {
-        'total_requests': AIRequest.objects.count(),
-        'requests_today': AIRequest.objects.filter(created_at__date=today).count(),
-        'requests_this_week': AIRequest.objects.filter(created_at__date__gte=week_ago).count(),
-        'requests_this_month': AIRequest.objects.filter(created_at__date__gte=month_ago).count(),
-        'success_rate': 0,
-        'avg_processing_time': 0,
-        'total_cost': 0,
-        'active_models': AIModel.objects.filter(is_active=True).count(),
-        'total_users': UserAIUsage.objects.count(),
-        'quota_exceeded_users': UserAIUsage.objects.filter(is_quota_exceeded=True).count()
-    }
-    
-    # Calculate success rate
-    completed_requests = AIRequest.objects.filter(status='completed').count()
-    if stats['total_requests'] > 0:
-        stats['success_rate'] = (completed_requests / stats['total_requests']) * 100
-    
-    # Calculate average processing time
-    avg_time = AIRequest.objects.filter(
-        status='completed'
-    ).aggregate(avg_time=Avg('processing_time'))['avg_time']
-    if avg_time:
-        stats['avg_processing_time'] = avg_time
-    
-    # Calculate total cost
-    total_cost = AIRequest.objects.aggregate(total=Sum('cost'))['total']
-    if total_cost:
-        stats['total_cost'] = total_cost
-    
-    return stats
-
-
-# Context processor for admin dashboard
-def ai_admin_context(request):
-    """
-    Context processor to add AI stats to admin dashboard
-    """
-    if request.path.startswith('/admin/') and request.user.is_staff:
-        return {
-            'ai_stats': ai_integration_dashboard_stats()
-        }
-    return {}
-
-
-# Admin action for bulk operations
-def export_ai_requests_csv(modeladmin, request, queryset):
-    """
-    Export AI requests to CSV
-    """
-    import csv
-    from django.http import HttpResponse
-    
-    response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="ai_requests.csv"'
-    
-    writer = csv.writer(response)
-    writer.writerow([
-        'ID', 'User', 'Model', 'Request Type', 'Status',
-        'Processing Time', 'Tokens Used', 'Cost', 'Created At'
-    ])
-    
-    for request_obj in queryset:
-        writer.writerow([
-            request_obj.id,
-            request_obj.user.username,
-            request_obj.ai_model.name,
-            request_obj.request_type,
-            request_obj.status,
-            request_obj.processing_time,
-            request_obj.tokens_used,
-            request_obj.cost,
-            request_obj.created_at
-        ])
-    
-    return response
-export_ai_requests_csv.short_description = "Export selected requests to CSV"
-
-# Add the action to AIRequestAdmin
-AIRequestAdmin.actions.append(export_ai_requests_csv)
-
-
 # Admin site customizations
 admin.site.site_header = "Portfolio Platform Admin"
 admin.site.site_title = "Portfolio Platform"
 admin.site.index_title = "Welcome to Portfolio Platform Administration"
-
-
-# Register additional admin views if needed
-class AIAnalyticsView:
-    """
-    Custom admin view for AI analytics
-    """
-    def __init__(self):
-        self.template_name = 'admin/ai_integration/analytics.html'
-    
-    def get_context_data(self):
-        """
-        Get analytics data for the view
-        """
-        stats = ai_integration_dashboard_stats()
-        
-        # Get top models by usage
-        top_models = AIModel.objects.annotate(
-            request_count=Count('requests')
-        ).order_by('-request_count')[:5]
-        
-        # Get recent activity
-        recent_requests = AIRequest.objects.select_related(
-            'user', 'ai_model'
-        ).order_by('-created_at')[:10]
-        
-        return {
-            'stats': stats,
-            'top_models': top_models,
-            'recent_requests': recent_requests
-        }
 
 
 # Custom admin filters

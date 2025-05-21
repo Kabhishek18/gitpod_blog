@@ -1,1 +1,886 @@
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/abhishek/unlock/gitpod_blog/blog/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 4955
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: wagtailcore_site
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 46, in process_response
+    redirect = get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 28, in get_redirect
+    redirect = _get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 17, in _get_redirect
+    site = Site.find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 157, in find_for_request
+    site = Site._find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 168, in _find_for_request
+    site = get_site_for_hostname(hostname, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 23, in get_site_for_hostname
+    sites = list(
+            ^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: wagtailcore_site
+"GET /favicon.ico HTTP/1.1" 500 168413
+"GET /static/images/favicons/favicon.svg HTTP/1.1" 404 1941
+"GET /static/images/favicons/favicon.svg HTTP/1.1" 404 1941
+"GET /static/images/favicons/favicon.svg HTTP/1.1" 404 1941
+"GET /static/images/favicons/favicon.svg HTTP/1.1" 404 1941
+"GET /static/images/favicons/favicon.svg HTTP/1.1" 404 1941
+"GET /static/images/favicons/favicon.svg HTTP/1.1" 404 1941
+Internal Server Error: /pwa-worker.js
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: wagtailcore_site
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 46, in process_response
+    redirect = get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 28, in get_redirect
+    redirect = _get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 17, in _get_redirect
+    site = Site.find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 157, in find_for_request
+    site = Site._find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 168, in _find_for_request
+    site = get_site_for_hostname(hostname, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 23, in get_site_for_hostname
+    sites = list(
+            ^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: wagtailcore_site
+"GET /pwa-worker.js HTTP/1.1" 500 168151
+- Broken pipe from ('127.0.0.1', 60199)
+"GET /django-admin/ HTTP/1.1" 302 0
+"GET /django-admin/login/?next=/django-admin/ HTTP/1.1" 200 4213
+"GET /static/admin/css/login.css HTTP/1.1" 200 958
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+"GET /static/admin/css/base.css HTTP/1.1" 200 21310
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: wagtailcore_site
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 46, in process_response
+    redirect = get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 28, in get_redirect
+    redirect = _get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 17, in _get_redirect
+    site = Site.find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 157, in find_for_request
+    site = Site._find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 168, in _find_for_request
+    site = get_site_for_hostname(hostname, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 23, in get_site_for_hostname
+    sites = list(
+            ^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: wagtailcore_site
+"GET /favicon.ico HTTP/1.1" 500 168452
+Internal Server Error: /pwa-worker.js
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: wagtailcore_site
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 46, in process_response
+    redirect = get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 28, in get_redirect
+    redirect = _get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 17, in _get_redirect
+    site = Site.find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 157, in find_for_request
+    site = Site._find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 168, in _find_for_request
+    site = get_site_for_hostname(hostname, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 23, in get_site_for_hostname
+    sites = list(
+            ^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: wagtailcore_site
+"GET /pwa-worker.js HTTP/1.1" 500 168151
+- Broken pipe from ('127.0.0.1', 60217)
+Internal Server Error: /django-admin/login/
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: auth_user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 441, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/views/generic/edit.py", line 152, in post
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/forms/forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/forms/forms.py", line 196, in errors
+    self.full_clean()
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/forms/forms.py", line 434, in full_clean
+    self._clean_form()
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/forms/forms.py", line 455, in _clean_form
+    cleaned_data = self.clean()
+                   ^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/contrib/auth/forms.py", line 252, in clean
+    self.user_cache = authenticate(
+                      ^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/views/decorators/debug.py", line 42, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/contrib/auth/__init__.py", line 77, in authenticate
+    user = backend.authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/contrib/auth/backends.py", line 46, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/contrib/auth/base_user.py", line 54, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: auth_user
+"POST /django-admin/login/?next=/django-admin/ HTTP/1.1" 500 233806
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: wagtailcore_site
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 46, in process_response
+    redirect = get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 28, in get_redirect
+    redirect = _get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 17, in _get_redirect
+    site = Site.find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 157, in find_for_request
+    site = Site._find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 168, in _find_for_request
+    site = get_site_for_hostname(hostname, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 23, in get_site_for_hostname
+    sites = list(
+            ^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: wagtailcore_site
+"GET /favicon.ico HTTP/1.1" 500 168452
+Internal Server Error: /pwa-worker.js
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: wagtailcore_site
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 46, in process_response
+    redirect = get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 28, in get_redirect
+    redirect = _get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 17, in _get_redirect
+    site = Site.find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 157, in find_for_request
+    site = Site._find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 168, in _find_for_request
+    site = get_site_for_hostname(hostname, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 23, in get_site_for_hostname
+    sites = list(
+            ^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: wagtailcore_site
+"GET /pwa-worker.js HTTP/1.1" 500 168151
+- Broken pipe from ('127.0.0.1', 60200)
+"GET /django-admin/login/?next=/django-admin/ HTTP/1.1" 200 4213
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: wagtailcore_site
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 46, in process_response
+    redirect = get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 28, in get_redirect
+    redirect = _get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 17, in _get_redirect
+    site = Site.find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 157, in find_for_request
+    site = Site._find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 168, in _find_for_request
+    site = get_site_for_hostname(hostname, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 23, in get_site_for_hostname
+    sites = list(
+            ^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: wagtailcore_site
+"GET /favicon.ico HTTP/1.1" 500 168452
+Internal Server Error: /pwa-worker.js
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: wagtailcore_site
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 46, in process_response
+    redirect = get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 28, in get_redirect
+    redirect = _get_redirect(request, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/contrib/redirects/middleware.py", line 17, in _get_redirect
+    site = Site.find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 157, in find_for_request
+    site = Site._find_for_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 168, in _find_for_request
+    site = get_site_for_hostname(hostname, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/wagtail/models/sites.py", line 23, in get_site_for_hostname
+    sites = list(
+            ^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mysite/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: wagtailcore_site
+"GET /pwa-worker.js HTTP/1.1" 500 168151
+- Broken pipe from ('127.0.0.1', 60216)
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2271
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3559
+Not Found: /pwa-worker.js
+"GET /pwa-worker.js HTTP/1.1" 404 3565
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 12150
+"GET /static/wagtailadmin/js/icons.js?v=41558fa3 HTTP/1.1" 200 650
+"GET /static/wagtailadmin/js/vendor/bootstrap-transition.js?v=41558fa3 HTTP/1.1" 200 876
+"GET /static/wagtailadmin/js/vendor/bootstrap-modal.js?v=41558fa3 HTTP/1.1" 200 3891
+"GET /static/wagtailadmin/js/vendor/tag-it.js?v=41558fa3 HTTP/1.1" 200 8042
+"GET /static/wagtailadmin/js/vendor/jquery-3.6.0.min.js?v=41558fa3 HTTP/1.1" 200 89531
+"GET /static/wagtailadmin/js/vendor/jquery.datetimepicker.js?v=41558fa3 HTTP/1.1" 200 61447
+"GET /static/wagtailadmin/js/wagtailadmin.js?v=41558fa3 HTTP/1.1" 200 11603
+"GET /static/wagtailadmin/js/vendor/jquery-ui-1.13.2.min.js?v=41558fa3 HTTP/1.1" 200 254377
+"GET /static/wagtailadmin/css/core.css?v=41558fa3 HTTP/1.1" 200 278806
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /static/wagtailadmin/js/telepath/telepath.js?v=41558fa3 HTTP/1.1" 200 4526
+"GET /admin/sprite/?h=b489757f HTTP/1.1" 200 63586
+"GET /static/wagtailadmin/js/modal-workflow.js?v=41558fa3 HTTP/1.1" 200 3754
+"GET /static/wagtailadmin/js/sidebar.js?v=41558fa3 HTTP/1.1" 200 46358
+"GET /static/wagtailadmin/js/vendor.js?v=41558fa3 HTTP/1.1" 200 358756
+"GET /static/wagtailadmin/js/core.js?v=41558fa3 HTTP/1.1" 200 670561
+"GET /static/wagtailadmin/images/favicon.ico?v=41558fa3 HTTP/1.1" 200 15406
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"POST /admin/login/ HTTP/1.1" 200 12448
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/sprite/?h=b489757f HTTP/1.1" 200 63586
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"GET /static/wagtailadmin/images/icons/check.svg HTTP/1.1" 304 0
+"POST /admin/login/ HTTP/1.1" 200 12448
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/sprite/?h=b489757f HTTP/1.1" 200 63586
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+Not Found: /pwa-worker.js
+"GET /pwa-worker.js HTTP/1.1" 404 3565
+Watching for file changes with StatReloader
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"POST /admin/login/ HTTP/1.1" 200 12448
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/sprite/?h=b489757f HTTP/1.1" 200 63586
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"POST /admin/login/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 24518
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/sprite/?h=b489757f HTTP/1.1" 200 63586
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"GET /admin/pages/2/ HTTP/1.1" 200 60506
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/sprite/?h=b489757f HTTP/1.1" 200 63586
+"GET /static/wagtailadmin/js/privacy-switch.js?v=41558fa3 HTTP/1.1" 200 2386
+"GET /static/wagtailadmin/js/bulk-actions.js?v=41558fa3 HTTP/1.1" 200 5592
+"GET /static/wagtailadmin/js/date-time-chooser.js?v=41558fa3 HTTP/1.1" 200 3376
+"GET /static/wagtailadmin/images/icons/arrow-down.svg HTTP/1.1" 304 0
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"GET /admin/pages/2/ HTTP/1.1" 200 60506
+"GET /admin/sprite/?h=b489757f HTTP/1.1" 200 63586
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"GET /admin/pages/2/add_subpage/ HTTP/1.1" 200 21216
+"GET /admin/sprite/?h=b489757f HTTP/1.1" 200 63586
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"GET /admin/pages/add/blog/blogindexpage/2/ HTTP/1.1" 200 85936
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /static/wagtailembeds/js/embed-chooser-modal.js?v=41558fa3 HTTP/1.1" 200 358
+"GET /static/wagtailadmin/css/panels/draftail.css?v=41558fa3 HTTP/1.1" 200 24566
+"GET /static/wagtaildocs/js/document-chooser-modal.js?v=41558fa3 HTTP/1.1" 200 2193
+"GET /static/wagtailimages/js/image-chooser-modal.js?v=41558fa3 HTTP/1.1" 200 3546
+"GET /static/wagtailadmin/js/page-chooser-modal.js?v=41558fa3 HTTP/1.1" 200 5265
+"GET /admin/sprite/?h=b489757f HTTP/1.1" 200 63586
+"GET /static/wagtailadmin/js/page-chooser.js?v=41558fa3 HTTP/1.1" 200 2110
+"GET /static/wagtailadmin/js/comments.js?v=41558fa3 HTTP/1.1" 200 52907
+"GET /static/wagtailadmin/js/draftail.js?v=41558fa3 HTTP/1.1" 200 294815
+"POST /admin/pages/add/blog/blogindexpage/2/preview/ HTTP/1.1" 200 42
+"GET /admin/pages/add/blog/blogindexpage/2/preview/?in_preview_panel=true HTTP/1.1" 200 1592
+"POST /admin/pages/add/blog/blogindexpage/2/preview/ HTTP/1.1" 200 42
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"GET /admin/choose-page/?page_type=blog.blogpage HTTP/1.1" 200 5254
+"GET /admin/pages/2/ HTTP/1.1" 200 60506
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/sprite/?h=b489757f HTTP/1.1" 200 63586
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"PATCH /admin/dismissibles/ HTTP/1.1" 200 70
+"PATCH /admin/dismissibles/ HTTP/1.1" 200 70
+"GET /admin/pages/ HTTP/1.1" 200 49906
+"GET /admin/sprite/?h=b489757f HTTP/1.1" 200 63586
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"GET /admin/pages/2/edit/ HTTP/1.1" 200 87976
+"GET /admin/sprite/?h=b489757f HTTP/1.1" 200 63586
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /static/wagtailadmin/js/workflow-action.js?v=41558fa3 HTTP/1.1" 200 3689
+"POST /admin/editing-sessions/ping/wagtailcore/page/2/1/ HTTP/1.1" 200 238
+"POST /admin/pages/2/edit/preview/ HTTP/1.1" 200 40
+"GET /admin/pages/2/edit/preview/?in_preview_panel=true HTTP/1.1" 200 211
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"POST /admin/editing-sessions/ping/wagtailcore/page/2/1/ HTTP/1.1" 200 238
+"POST /admin/editing-sessions/ping/wagtailcore/page/2/1/ HTTP/1.1" 200 238
+"POST /admin/pages/2/edit/preview/ HTTP/1.1" 200 40
+"GET /admin/pages/2/edit/preview/?in_preview_panel=true HTTP/1.1" 200 211
+"POST /admin/editing-sessions/release/1/ HTTP/1.1" 200 2
+"GET /admin/pages/2/edit/preview/ HTTP/1.1" 200 211
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"POST /admin/editing-sessions/ping/wagtailcore/page/2/1/ HTTP/1.1" 200 238
+"POST /admin/editing-sessions/ping/wagtailcore/page/2/2/ HTTP/1.1" 200 238
+"POST /admin/editing-sessions/release/2/ HTTP/1.1" 200 2
+"POST /admin/editing-sessions/ping/wagtailcore/page/2/2/ HTTP/1.1" 200 238
+"POST /admin/editing-sessions/release/3/ HTTP/1.1" 200 2
+"POST /admin/editing-sessions/ping/wagtailcore/page/2/3/ HTTP/1.1" 200 238
+"GET /admin/pages/2/ HTTP/1.1" 200 60644
+"GET /admin/sprite/?h=b489757f HTTP/1.1" 200 63586
+"POST /admin/editing-sessions/release/4/ HTTP/1.1" 200 2
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"GET /admin/api/main/pages/?child_of=1&for_explorer=1&fields=parent HTTP/1.1" 200 1394
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"GET /static/wagtailadmin/images/favicon.ico?v=41558fa3 HTTP/1.1" 200 15406
+"GET /static/wagtailadmin/images/favicon.ico?v=41558fa3 HTTP/1.1" 200 15406
+"GET /django-admin/login/?next=/django-admin/ HTTP/1.1" 302 0
+"GET /django-admin/ HTTP/1.1" 200 11525
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+Not Found: /pwa-worker.js
+"GET /pwa-worker.js HTTP/1.1" 404 3565
+"GET /django-admin/ai_integration/aifeedback/ HTTP/1.1" 200 14046
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+"GET /static/admin/js/core.js HTTP/1.1" 200 5682
+"GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+"GET /django-admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+"GET /static/admin/js/filters.js HTTP/1.1" 200 978
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+Not Found: /pwa-worker.js
+"GET /pwa-worker.js HTTP/1.1" 404 3565
+"GET /django-admin/ai_integration/aigeneratedimage/ HTTP/1.1" 200 13215
+"GET /django-admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /django-admin/ai_integration/aimodel/ HTTP/1.1" 200 13570
+"GET /django-admin/jsi18n/ HTTP/1.1" 200 3343
+Not Found: /pwa-worker.js
+"GET /pwa-worker.js HTTP/1.1" 404 3565
+"GET /django-admin/ai_integration/airequest/ HTTP/1.1" 200 16247
+"GET /django-admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /django-admin/ai_integration/contentanalysis/ HTTP/1.1" 200 13436
+"GET /django-admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /django-admin/ai_integration/aimodel/ HTTP/1.1" 200 13570
+"GET /django-admin/jsi18n/ HTTP/1.1" 200 3343
+Not Found: /pwa-worker.js
+"GET /pwa-worker.js HTTP/1.1" 404 3565
+Not Found: /pwa-worker.js
+"GET /pwa-worker.js HTTP/1.1" 404 3565
+"GET /django-admin/ai_integration/aimodel/add/ HTTP/1.1" 200 22144
+"GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+"GET /static/admin/js/collapse.js HTTP/1.1" 200 1803
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+"GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+"GET /django-admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /static/admin/css/widgets.css HTTP/1.1" 200 11921
+Not Found: /pwa-worker.js
+"GET /pwa-worker.js HTTP/1.1" 404 3565
+"GET /django-admin/ai_integration/prompttemplate/ HTTP/1.1" 200 13979
+"GET /django-admin/jsi18n/ HTTP/1.1" 200 3343
+Not Found: /pwa-worker.js
+"GET /pwa-worker.js HTTP/1.1" 404 3565
+"GET /admin/api/main/pages/?child_of=1&for_explorer=1&fields=parent HTTP/1.1" 200 1394
+"GET /admin/pages/2/edit/ HTTP/1.1" 200 87976
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/sprite/?h=b489757f HTTP/1.1" 200 63586
+"POST /admin/editing-sessions/ping/wagtailcore/page/2/5/ HTTP/1.1" 200 238
+"POST /admin/pages/2/edit/preview/ HTTP/1.1" 200 40
+"GET /admin/pages/2/edit/preview/?in_preview_panel=true HTTP/1.1" 200 211
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
+"POST /admin/editing-sessions/release/5/ HTTP/1.1" 200 2
+Not Found: /pwa-worker.js
+"GET /pwa-worker.js HTTP/1.1" 404 3565
+"GET /admin/pwa-worker.js HTTP/1.1" 301 0
