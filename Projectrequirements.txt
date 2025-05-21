@@ -1,0 +1,75 @@
+Django
+django-environ
+wagtail
+wagtail-modeladmin
+psycopg2-binary
+djangorestframework
+django-cors-headers
+django-filter
+drf-spectacular
+redis
+celery
+django-redis
+transformers
+torch
+requests
+openai
+anthropic
+# Image Processing
+Pillow
+pillow-heif
+
+# Text Processing
+nltk
+textstat
+spacy
+
+# File Processing
+python-magic
+openpyxl
+python-docx
+
+# Security
+django-ratelimit
+django-security
+
+# Monitoring and Analytics
+sentry-sdk
+django-extensions
+
+# Email
+django-anymail
+django-meta
+django-sitemaps
+
+# Search
+whoosh
+
+# Forms and Validation
+django-crispy-forms
+crispy-bootstrap5
+
+# Utilities
+python-decouple
+python-slugify
+pytz
+python-dateutil
+
+# Testing
+pytest
+pytest-django
+factory-boy
+coverage
+
+# Development Dependencies (add to requirements-dev.txt)
+# black
+# flake8
+# isort
+# pre-commit
+# django-debug-toolbar
+
+# Production Dependencies (add to requirements-prod.txt)
+# gunicorn
+# whitenoise
+# django-storages
+# boto3
