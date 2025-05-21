@@ -1,0 +1,625 @@
+# Django Portfolio Platform - .gitignore
+
+# =============================================================================
+# Django Framework
+# =============================================================================
+
+# Django settings and secrets
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Django migrations (uncomment if you want to ignore migrations)
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# Django static files (collected)
+/staticfiles/
+/static_root/
+
+# Django media files (user uploads)
+/media/
+!/media/.gitkeep
+
+# Django cache
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Django session files
+django_session*
+
+# =============================================================================
+# Python
+# =============================================================================
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# =============================================================================
+# IDEs and Editors
+# =============================================================================
+
+# PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Atom
+.atom/
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.project
+.pydevproject
+.cproject
+.metadata
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+
+# =============================================================================
+# Operating Systems
+# =============================================================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =============================================================================
+# Web Development
+# =============================================================================
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+out
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/
+
+# =============================================================================
+# Database
+# =============================================================================
+
+# SQLite
+*.sqlite
+*.sqlite3
+*.db
+
+# PostgreSQL
+*.sql
+
+# MySQL
+*.sql
+
+# MongoDB
+*.bson
+
+# Redis
+dump.rdb
+
+# =============================================================================
+# Version Control
+# =============================================================================
+
+# Git
+.git/
+.gitignore.bak
+
+# SVN
+.svn/
+
+# Mercurial
+.hg/
+.hgignore
+
+# Bazaar
+.bzr/
+.bzrignore
+
+# =============================================================================
+# Deployment and DevOps
+# =============================================================================
+
+# Docker
+Dockerfile.prod
+docker-compose.prod.yml
+.dockerignore
+
+# Kubernetes
+*.yaml.bak
+*.yml.bak
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Ansible
+*.retry
+
+# Vagrant
+.vagrant/
+
+# Heroku
+.heroku/
+Procfile.local
+
+# Railway
+.railway/
+
+# Vercel
+.vercel
+
+# AWS
+.aws/
+
+# Google Cloud
+.gcloud/
+*.json
+
+# =============================================================================
+# AI and Machine Learning
+# =============================================================================
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Model files
+*.h5
+*.pkl
+*.joblib
+*.model
+*.pt
+*.pth
+*.onnx
+
+# Datasets
+*.csv
+*.json
+*.xml
+*.parquet
+!/fixtures/*.json
+!/sample_data/*.csv
+
+# AI API Keys (already covered in .env but being explicit)
+openai_api_key.txt
+huggingface_token.txt
+anthropic_key.txt
+
+# Model downloads cache
+.transformers_cache/
+.huggingface_cache/
+.cache/huggingface/
+
+# TensorFlow
+*.pb
+saved_model/
+checkpoints/
+
+# PyTorch
+*.pth
+*.pt
+
+# =============================================================================
+# Portfolio Platform Specific
+# =============================================================================
+
+# AI Generated Content
+/media/ai_generated/
+!/media/ai_generated/.gitkeep
+
+# Logs
+/logs/
+*.log.*
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Temporary files
+temp/
+tmp/
+.tmp/
+
+# User uploads (keep structure but not content)
+/media/uploads/
+!/media/uploads/.gitkeep
+
+# Static files (don't track collected static files)
+/static_collected/
+/staticfiles/
+
+# Local configuration files
+local_settings.py
+.env.local
+.env.development
+.env.staging
+.env.production
+
+# Database backups
+*.sql.gz
+*.dump
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.csr
+
+# API documentation builds
+/docs/build/
+/api_docs/
+
+# Performance profiling
+*.prof
+*.cprof
+
+# Memory dumps
+*.hprof
+*.dump
+
+# =============================================================================
+# Text Editors and Documentation
+# =============================================================================
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Microsoft Office
+*.tmp
+~$*
+
+# LibreOffice
+.~lock.*
+
+# =============================================================================
+# Monitoring and Analytics
+# =============================================================================
+
+# Sentry
+.sentry-native
+
+# New Relic
+newrelic.ini
+
+# Application Performance Monitoring
+*.pid
+
+# =============================================================================
+# Cache and Temporary Files
+# =============================================================================
+
+# General cache
+.cache/
+cache/
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# =============================================================================
+# Custom Ignores (Project Specific)
+# =============================================================================
+
+# Add your custom ignore patterns here
+# Example:
+# /custom_scripts/
+# /private_docs/
+# /local_configs/
+
+# Development tools
+.vscode/settings.json
+.vscode/launch.json
+
+# Local development overrides
+docker-compose.override.yml
+local.yml
+
+# Backup directories
+backup/
+backups/
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Keep important empty directories
+!.gitkeep
+!.gitignore
+
+# =============================================================================
+# End of .gitignore
+# =============================================================================
