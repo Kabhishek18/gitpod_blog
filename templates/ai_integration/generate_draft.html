@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}AI Blog Generator{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center mb-5">AI Blog Draft Generator</h1>
+    
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <form id="ai-blog-draft-form" class="card p-4">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="topic" class="form-label">Blog Topic *</label>
+                    <input type="text" class="form-control" id="topic" name="topic" required
+                           placeholder="Enter your blog topic">
+                </div>
+                
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="tone" class="form-label">Tone</label>
+                        <select class="form-control" id="tone" name="tone">
+                            <option value="professional">Professional</option>
+                            <option value="casual">Casual</option>
+                            <option value="technical">Technical</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="length" class="form-label">Length</label>
+                        <select class="form-control" id="length" name="length">
+                            <option value="short">Short</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="long">Long</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-magic me-2"></i>Generate Draft
+                </button>
+            </form>
+            
+            <div id="ai-result" class="mt-4"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
