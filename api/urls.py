@@ -5,8 +5,14 @@ from . import views
 
 # Create a router and register our viewsets with it
 router = DefaultRouter()
-router.register(r'projects', views.ProjectViewSet, basename='project')
 router.register(r'blog', views.BlogPostViewSet, basename='blogpost')
+router.register(r'blog-categories', views.BlogCategoryViewSet, basename='blogcategory')
+router.register(r'blog-authors', views.BlogAuthorViewSet, basename='blogauthor')
+router.register(r'ai-models', views.AIModelViewSet, basename='aimodel')
+router.register(r'ai-requests', views.AIRequestViewSet, basename='airequest')
+
+# Placeholder viewsets (for portfolio app endpoints that don't exist)
+router.register(r'projects', views.ProjectViewSet, basename='project')
 router.register(r'skills', views.SkillViewSet, basename='skill')
 router.register(r'technologies', views.TechnologyViewSet, basename='technology')
 router.register(r'experiences', views.ExperienceViewSet, basename='experience')
@@ -21,10 +27,14 @@ urlpatterns = [
     # Authentication
     path('auth/', include('rest_framework.urls')),
     
-    # Custom endpoints
+    # Stats endpoints
     path('portfolio/stats/', views.PortfolioStatsView.as_view(), name='portfolio-stats'),
     path('blog/stats/', views.BlogStatsView.as_view(), name='blog-stats'),
+    
+    # Contact
     path('contact/', views.ContactView.as_view(), name='contact'),
+    
+    # Resume
     path('resume/download/', views.ResumeDownloadView.as_view(), name='resume-download'),
     
     # Search endpoints

@@ -1,4 +1,4 @@
-# Portfolio Platform Architecture
+# Blog Architecture
 
 ## System Overview
 
